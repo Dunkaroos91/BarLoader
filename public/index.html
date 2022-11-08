@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bar Loader</title>
+
+    <!-- external CSS link -->
+    <script
+      src="https://kit.fontawesome.com/a2f02755e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- app Nav -->
+    <nav class="flexBox">
+      <!-- app Title -->
+      <h1>Bar Loader
+      </h1>
+
+      <!-- Settings - Nav Btn with modal -->
+      <section class="wrapper">
+        <a class="navBtns" href="#demo-modal"
+          ><i class="fa-solid fa-bars"></i
+        ></a>
+      </section>
+      <section id="demo-modal" class="modal">
+        <section class="modal__content">
+          <h3>Settings</h3>
+
+          <section class="flexBox two">
+            <p>Dark Mode</p>
+            <div class="onoffswitch">
+              <input
+                type="checkbox"
+                name="onoffswitch"
+                class="onoffswitch-checkbox"
+                id="myonoffswitch"
+                tabindex="0"
+                checked
+              />
+              <label class="onoffswitch-label" for="myonoffswitch"></label>
+            </div>
+          </section>
+          <a href="#" class="modal__close">&times;</a>
+        </section>
+      </section>
+    </nav>
+
+    <!-- Center appContainer -->
+    <section class="flexBox centerApp">
+      <main id="appContainer">
+        <!-- section containing input and button to calculate plates -->
+        <section id="calculationsContainer" class="innerContainer flexBox">
+          <input
+            type="number"
+            name=""
+            min="0"
+            placeholder="Input lbs"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            id="getWeight"
+          />
+          <button id="calculatePlates">Calculate kg</button>
+        </section>
+
+        <section id="displayPlates" class="flexBox centerApp">
+          <h2 id="resultsTextDesc"></h2>
+        </section>
+
+        <!-- section toggle - switch between history & warm up reps calc -->
+        <section id="sectionToggle" class="flexBox centerApp">
+          <button id="historyToggleBtn" class="toggleDisplayBtn active">
+            History
+          </button>
+          <button id="warmUpToggleBtn" class="toggleDisplayBtn">Warm Up</button>
+        </section>
+
+        <!-- section for displaying past calculations -->
+        <section id="historyContainer" class="innerContainer">
+          <ul id="listHistory"></ul>
+        </section>
+
+        <section id="warmUpContainer" class="innerContainer hidden">
+          <ul id="listWarmUpReps"></ul>
+        </section>
+      </main>
+    </section>
+    <!-- app container -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
